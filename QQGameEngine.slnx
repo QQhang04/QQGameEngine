@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="DemoGame/DemoGame.vcxproj" Id="e0e0e1ed-428a-4d48-b2ec-90a4635f8d43" />
+  <Project Path="QQGameEngine/QQGameEngine.vcxproj" Id="735396bf-a6cb-4d4a-a9c3-f28da3a5d860" />
+</Solution>
