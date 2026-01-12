@@ -1,0 +1,3 @@
+[submodule "QQGameEngine/vendor/spdlog"]
+	path = QQGameEngine/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git

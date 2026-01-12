@@ -1,8 +1,8 @@
 #pragma once
 
 // support for the applications
-#include <stdio.h>
 
 #include "QQhang/Application.h"
+#include "QQhang/Log.h"
 
 #include "QQhang/EntryPoint.h"
