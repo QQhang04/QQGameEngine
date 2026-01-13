@@ -6,7 +6,7 @@ extern QQhang::Application* QQhang::CreateApplication();
 
 int main(int argc, char** argv) {
 	QQhang::Log::Init();
-	QQH_CORE_INFO("Engine Log System Initialized!");
+	QQH_CORE_WARN("Engine Log System Initialized!");
 	QQH_INFO("Hello!");
 
 	auto app = QQhang::CreateApplication();
