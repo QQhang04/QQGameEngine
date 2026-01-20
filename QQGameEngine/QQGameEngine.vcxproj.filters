@@ -4,6 +4,9 @@
     <Filter Include="QQhang">
       <UniqueIdentifier>{2553C5CA-11F5-EFA0-FAAF-03F5E6F076F1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QQhang\Events">
+      <UniqueIdentifier>{6c09c05a-36a9-44d2-b20c-5fc4355c4a7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\QQhang.h" />
@@ -18,6 +21,18 @@
     </ClInclude>
     <ClInclude Include="src\QQhang\Log.h">
       <Filter>QQhang</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QQhang\Events\ApplicationEvent.h">
+      <Filter>QQhang\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QQhang\Events\Event.h">
+      <Filter>QQhang\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QQhang\Events\KeyEvent.h">
+      <Filter>QQhang\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QQhang\Events\MouseEvent.h">
+      <Filter>QQhang\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
