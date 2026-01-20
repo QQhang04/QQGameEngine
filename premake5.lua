@@ -19,6 +19,9 @@ project "QQGameEngine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "pch.h"
+    pchsource "%{prj.name}/src/pch.cpp"
+
     files 
     {
         "%{prj.name}/src/**.h",
@@ -34,6 +37,8 @@ project "QQGameEngine"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "off"
+
+        buildoptions { "/utf-8" }
 
         defines 
         {
@@ -87,6 +92,8 @@ project "DemoGame"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
+
+        buildoptions { "/utf-8" }
 
         defines 
         {

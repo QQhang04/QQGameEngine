@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace QQhang {
 
 	class QQH_API KeyEvent : public Event

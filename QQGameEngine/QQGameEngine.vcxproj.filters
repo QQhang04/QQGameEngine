@@ -5,7 +5,7 @@
       <UniqueIdentifier>{2553C5CA-11F5-EFA0-FAAF-03F5E6F076F1}</UniqueIdentifier>
     </Filter>
     <Filter Include="QQhang\Events">
-      <UniqueIdentifier>{6c09c05a-36a9-44d2-b20c-5fc4355c4a7d}</UniqueIdentifier>
+      <UniqueIdentifier>{696323A4-D523-9FDA-9E5E-E8570ADEE3B6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -17,9 +17,6 @@
       <Filter>QQhang</Filter>
     </ClInclude>
     <ClInclude Include="src\QQhang\EntryPoint.h">
-      <Filter>QQhang</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QQhang\Log.h">
       <Filter>QQhang</Filter>
     </ClInclude>
     <ClInclude Include="src\QQhang\Events\ApplicationEvent.h">
@@ -34,6 +31,10 @@
     <ClInclude Include="src\QQhang\Events\MouseEvent.h">
       <Filter>QQhang\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\QQhang\Log.h">
+      <Filter>QQhang</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\QQhang\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\QQhang\Log.cpp">
       <Filter>QQhang</Filter>
     </ClCompile>
+    <ClCompile Include="src\pch.cpp" />
   </ItemGroup>
 </Project>

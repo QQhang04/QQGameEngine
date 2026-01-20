@@ -2,9 +2,7 @@
 
 #include "QQhang/Core.h"
 
-#include <string>
-#include <functional>
-#include <iostream>
+#include "pch.h"
 
 namespace QQhang {
 
