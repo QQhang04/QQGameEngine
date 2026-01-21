@@ -7,6 +7,12 @@
     <Filter Include="QQhang\Events">
       <UniqueIdentifier>{696323A4-D523-9FDA-9E5E-E8570ADEE3B6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QQhang\Platforms">
+      <UniqueIdentifier>{AC0CA52B-9805-C47D-C137-A902AD8FA389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QQhang\Platforms\Windows">
+      <UniqueIdentifier>{E6A29A9F-D2C7-E91F-FB12-CFAFE796E83D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\QQhang.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\QQhang\Log.h">
       <Filter>QQhang</Filter>
     </ClInclude>
+    <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h">
+      <Filter>QQhang\Platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QQhang\Window.h">
+      <Filter>QQhang</Filter>
+    </ClInclude>
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\QQhang\Log.cpp">
       <Filter>QQhang</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QQhang\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>QQhang\Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
   </ItemGroup>
