@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "QQGameEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "QQGameEngine/vendor/glad/include"
+IncludeDir["ImGui"] = "QQGameEngine/vendor/imgui"
 
 include "QQGameEngine/vendor/GLFW"
+include "QQGameEngine/vendor/glad"
+include "QQGameEngine/vendor/imgui"
 
 project "QQGameEngine"
     location "QQGameEngine"
@@ -25,7 +29,7 @@ project "QQGameEngine"
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     pchheader "pch.h"
-    pchsource "%{prj.name}/src/pch.cpp"
+    pchsource "QQGameEngine/src/pch.cpp"
 
     files 
     {
@@ -37,12 +41,16 @@ project "QQGameEngine"
     {
         "%{prj.name}/vendor/spdlog/include",
         "%{prj.name}/src",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 
@@ -55,7 +63,8 @@ project "QQGameEngine"
         defines 
         {
             "QQH_PLATFORM_WINDOWS",
-            "QQH_BUILD_DLL"
+            "QQH_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -65,14 +74,17 @@ project "QQGameEngine"
 
     filter "configurations:Debug"
         defines "QQH_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "QQH_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "QQH_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "DemoGame"
@@ -114,12 +126,15 @@ project "DemoGame"
 
     filter "configurations:Debug"
         defines "QQH_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "QQH_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "QQH_DIST"
+        buildoptions "/MD"
         optimize "On"

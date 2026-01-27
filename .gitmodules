@@ -4,3 +4,6 @@
 [submodule "QQGameEngine/vendor/GLFW"]
 	path = QQGameEngine/vendor/GLFW
 	url = git@github.com:TheCherno/glfw.git
+[submodule "QQGameEngine/vendor/imgui"]
+	path = QQGameEngine/vendor/imgui
+	url = git@github.com:TheCherno/imgui.git
