@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		QQH_INFO("ExampleLayer::Update");
+		//QQH_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(QQhang::Event& event) override
 	{
-		QQH_TRACE("{0}", event.ToString());
+		QQH_TRACE("EXAMPLE LAYER ONEVENT: {0}", event.ToString());
 	}
 
 };

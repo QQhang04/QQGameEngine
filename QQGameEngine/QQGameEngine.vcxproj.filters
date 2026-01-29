@@ -13,6 +13,9 @@
     <Filter Include="QQhang\Platforms">
       <UniqueIdentifier>{AC0CA52B-9805-C47D-C137-A902AD8FA389}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QQhang\Platforms\OpenGL">
+      <UniqueIdentifier>{603C97B4-CC73-DF4B-D57D-436F41340645}</UniqueIdentifier>
+    </Filter>
     <Filter Include="QQhang\Platforms\Windows">
       <UniqueIdentifier>{E6A29A9F-D2C7-E91F-FB12-CFAFE796E83D}</UniqueIdentifier>
     </Filter>
@@ -52,6 +55,9 @@
     <ClInclude Include="src\QQhang\Log.h">
       <Filter>QQhang</Filter>
     </ClInclude>
+    <ClInclude Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.h">
+      <Filter>QQhang\Platforms\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h">
       <Filter>QQhang\Platforms\Windows</Filter>
     </ClInclude>
@@ -59,8 +65,6 @@
       <Filter>QQhang</Filter>
     </ClInclude>
     <ClInclude Include="src\pch.h" />
-    <ClInclude Include="vendor\imgui\backends\imgui_impl_opengl3.h" />
-    <ClInclude Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\QQhang\Application.cpp">
@@ -78,11 +82,12 @@
     <ClCompile Include="src\QQhang\Log.cpp">
       <Filter>QQhang</Filter>
     </ClCompile>
+    <ClCompile Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.cpp">
+      <Filter>QQhang\Platforms\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\QQhang\Platforms\Windows\WindowsWindow.cpp">
       <Filter>QQhang\Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
-    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.cpp" />
   </ItemGroup>
 </Project>

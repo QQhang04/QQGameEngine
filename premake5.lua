@@ -1,5 +1,6 @@
 workspace "QQGameEngine"
     architecture "x64"
+    startproject "DemoGame"
 
     configurations
     {
@@ -16,9 +17,12 @@ IncludeDir["GLFW"] = "QQGameEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "QQGameEngine/vendor/glad/include"
 IncludeDir["ImGui"] = "QQGameEngine/vendor/imgui"
 
-include "QQGameEngine/vendor/GLFW"
-include "QQGameEngine/vendor/glad"
-include "QQGameEngine/vendor/imgui"
+group "Dependencies"
+    include "QQGameEngine/vendor/GLFW"
+    include "QQGameEngine/vendor/glad"
+    include "QQGameEngine/vendor/imgui"
+
+group ""
 
 project "QQGameEngine"
     location "QQGameEngine"
@@ -69,7 +73,7 @@ project "QQGameEngine"
 
         postbuildcommands
         {
-            "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/DemoGame"
+            "{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/DemoGame/\""
         }
 
     filter "configurations:Debug"

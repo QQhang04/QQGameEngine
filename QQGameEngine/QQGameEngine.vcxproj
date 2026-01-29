@@ -94,7 +94,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Debug-windows-x86_64\DemoGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Debug-windows-x86_64\DemoGame &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Debug-windows-x86_64\DemoGame\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Debug-windows-x86_64\DemoGame\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,7 +121,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Release-windows-x86_64\DemoGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Release-windows-x86_64\DemoGame &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Release-windows-x86_64\DemoGame\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Release-windows-x86_64\DemoGame\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -148,7 +148,7 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Dist-windows-x86_64\DemoGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll ..\bin\Dist-windows-x86_64\DemoGame &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Dist-windows-x86_64\DemoGame\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\QQGameEngine\QQGameEngine.dll "..\bin\Dist-windows-x86_64\DemoGame\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -168,7 +168,6 @@
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\QQhang\Window.h" />
     <ClInclude Include="src\pch.h" />
-    <ClInclude Include="vendor\imgui\backends\imgui_impl_opengl3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\QQhang\Application.cpp" />
@@ -181,7 +180,6 @@
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
