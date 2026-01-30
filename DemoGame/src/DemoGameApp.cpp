@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		//QQH_INFO("ExampleLayer::Update");
+		/*auto [x, y] = QQhang::Input::GetMousePosition();
+		QQH_INFO("ExampleLayer's mouse position: {0}, {1}", x, y);*/
 	}
 
 	void OnEvent(QQhang::Event& event) override
 	{
-		QQH_TRACE("EXAMPLE LAYER ONEVENT: {0}", event.ToString());
+		if (event.GetEventType() == QQhang::EventType::KeyPressed)
+		{
+			QQhang::KeyPressedEvent& e = (QQhang::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == QQH_KEY_TAB)
+				QQH_TRACE("Tab key is pressed (event)!");
+			QQH_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };

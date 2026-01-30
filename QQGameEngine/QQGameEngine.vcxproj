@@ -161,10 +161,14 @@
     <ClInclude Include="src\QQhang\Events\KeyEvent.h" />
     <ClInclude Include="src\QQhang\Events\MouseEvent.h" />
     <ClInclude Include="src\QQhang\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\QQhang\Input.h" />
+    <ClInclude Include="src\QQhang\KeyCodes.h" />
     <ClInclude Include="src\QQhang\Layer.h" />
     <ClInclude Include="src\QQhang\LayerStack.h" />
     <ClInclude Include="src\QQhang\Log.h" />
+    <ClInclude Include="src\QQhang\MouseButtonCodes.h" />
     <ClInclude Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\QQhang\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\QQhang\Window.h" />
     <ClInclude Include="src\pch.h" />
@@ -176,6 +180,7 @@
     <ClCompile Include="src\QQhang\LayerStack.cpp" />
     <ClCompile Include="src\QQhang\Log.cpp" />
     <ClCompile Include="src\QQhang\Platforms\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\QQhang\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\QQhang\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
