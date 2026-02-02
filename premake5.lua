@@ -27,9 +27,10 @@ group ""
 
 project "QQGameEngine"
     location "QQGameEngine"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
-    staticruntime "off"
+    staticruntime "on"
+    cppdialect "C++17"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -64,20 +65,13 @@ project "QQGameEngine"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
 
         buildoptions { "/utf-8" }
 
         defines 
         {
             "QQH_PLATFORM_WINDOWS",
-            "QQH_BUILD_DLL",
             "GLFW_INCLUDE_NONE"
-        }
-
-        postbuildcommands
-        {
-            "{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/DemoGame/\""
         }
 
     filter "configurations:Debug"
@@ -100,7 +94,8 @@ project "DemoGame"
     kind "ConsoleApp"
 
     language "C++"
-    staticruntime "off"
+    staticruntime "on"
+    cppdialect "C++17"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -122,11 +117,14 @@ project "DemoGame"
     links
     {
         "QQGameEngine"
+        -- 注意：QQGameEngine 是静态库时，其依赖库不会自动传递到最终 exe 的链接阶段
+        -- "GLFW",
+        -- "Glad",
+        -- "ImGui",
+        -- "opengl32.lib"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
-
         buildoptions { "/utf-8" }
 
         defines 

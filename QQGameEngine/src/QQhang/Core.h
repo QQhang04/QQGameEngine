@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef QQH_PLATFORM_WINDOWS
+#if QQH_DYNAMIC_LINK
 	#ifdef QQH_BUILD_DLL
 		#define QQH_API __declspec(dllexport)
 	#else
 		#define QQH_API __declspec(dllimport)
 	#endif
+#else
+	#define QQH_API
+#endif
 #else
 	#error QQH Engine only supports Windows
 #endif
