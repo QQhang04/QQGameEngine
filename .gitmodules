@@ -7,3 +7,6 @@
 [submodule "QQGameEngine/vendor/imgui"]
 	path = QQGameEngine/vendor/imgui
 	url = git@github.com:TheCherno/imgui.git
+[submodule "QQGameEngine/vendor/glm"]
+	path = QQGameEngine/vendor/glm
+	url = git@github.com:g-truc/glm.git

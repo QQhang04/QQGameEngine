@@ -1,5 +1,7 @@
 #include <QQhang.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public QQhang::Layer
 {
 public:
@@ -25,13 +27,19 @@ public:
 		}
 	}
 
+	virtual void OnImGuiRender() override
+	{
+		/*ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();*/
+	}
+
 };
 
 class GameDemo : public QQhang::Application {
 public:
 	GameDemo() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new QQhang::ImGuiLayer());
 	}
 
 	~GameDemo() {

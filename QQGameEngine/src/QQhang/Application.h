@@ -8,6 +8,8 @@
 
 #include "QQhang/Window.h"
 
+#include "QQhang/ImGui/ImGuiLayer.h"
+
 namespace QQhang {
 	class QQH_API Application
 	{
@@ -28,6 +30,7 @@ namespace QQhang {
 		bool OnWindowClose(WindowCloseEvent& e);
 	private:
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
