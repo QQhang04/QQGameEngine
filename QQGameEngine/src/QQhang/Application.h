@@ -10,6 +10,8 @@
 
 #include "QQhang/ImGui/ImGuiLayer.h"
 
+#include "QQhang/Renderer/Shader.h"
+
 namespace QQhang {
 	class QQH_API Application
 	{
@@ -37,6 +39,7 @@ namespace QQhang {
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
 
 		static Application* s_Instance;
+		std::unique_ptr<Shader> m_Shader;
 	};
 
 	Application* CreateApplication();

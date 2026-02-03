@@ -162,6 +162,7 @@
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\QQhang\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\QQhang\Renderer\Shader.h" />
     <ClInclude Include="src\QQhang\Window.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -597,6 +598,7 @@
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\QQhang\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
