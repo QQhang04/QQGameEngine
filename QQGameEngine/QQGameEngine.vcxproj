@@ -143,6 +143,9 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\QQhang\Renderer\Renderer.h" />
+    <ClInclude Include="src\QQhang\Renderer\Buffer.h" />
     <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\QQhang.h" />
     <ClInclude Include="src\QQhang\Application.h" />
@@ -586,6 +589,9 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\QQhang\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\QQhang\Renderer\Buffer.cpp" />
     <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\QQhang\Application.cpp" />
     <ClCompile Include="src\QQhang\ImGui\ImGuiBuild.cpp" />
