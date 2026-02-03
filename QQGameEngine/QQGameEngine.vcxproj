@@ -143,6 +143,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\QQhang.h" />
     <ClInclude Include="src\QQhang\Application.h" />
     <ClInclude Include="src\QQhang\Core.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="src\QQhang\MouseButtonCodes.h" />
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\QQhang\Platforms\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\QQhang\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\QQhang\Window.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -583,6 +585,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\QQhang\Application.cpp" />
     <ClCompile Include="src\QQhang\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\QQhang\ImGui\ImGuiLayer.cpp" />
