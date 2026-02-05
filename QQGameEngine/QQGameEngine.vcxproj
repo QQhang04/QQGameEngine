@@ -143,6 +143,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\QQhang\Renderer\Renderer.h" />
     <ClInclude Include="src\QQhang\Renderer\Buffer.h" />
@@ -587,8 +588,10 @@
     <ClInclude Include="vendor\glm\glm\vec3.hpp" />
     <ClInclude Include="vendor\glm\glm\vec4.hpp" />
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\QQhang\Renderer\VertexArray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\QQhang\Renderer\Renderer.cpp" />
     <ClCompile Include="src\QQhang\Renderer\Buffer.cpp" />
@@ -605,6 +608,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\QQhang\Renderer\Shader.cpp" />
+    <ClCompile Include="src\QQhang\Renderer\VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">

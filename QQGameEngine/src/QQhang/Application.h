@@ -12,6 +12,7 @@
 
 #include "QQhang/Renderer/Shader.h"
 #include "QQhang/Renderer/Buffer.h"
+#include "QQhang/Renderer/VertexArray.h"
 
 namespace QQhang {
 	class QQH_API Application
@@ -36,13 +37,13 @@ namespace QQhang {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		unsigned int m_VertexArray;
 	private:
 		static Application* s_Instance;
-		std::unique_ptr<Shader> m_Shader;
-		std::unique_ptr<VertexBuffer> m_VertexBuffer;
-		std::unique_ptr<IndexBuffer> m_IndexBuffer;
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+
+		std::shared_ptr<Shader> m_BlueShader;
+		std::shared_ptr<VertexArray> m_SquareVA;
 	};
 
 	Application* CreateApplication();

@@ -1362,6 +1362,8 @@
     <ClInclude Include="src\QQhang\Renderer\Buffer.h" />
     <ClInclude Include="src\QQhang\Renderer\Renderer.h" />
     <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\QQhang\Renderer\VertexArray.h" />
+    <ClInclude Include="src\QQhang\Platforms\OpenGL\OpenGLVertexArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\QQhang\Application.cpp">
@@ -1396,5 +1398,7 @@
     <ClCompile Include="src\QQhang\Renderer\Buffer.cpp" />
     <ClCompile Include="src\QQhang\Renderer\Renderer.cpp" />
     <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\QQhang\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\QQhang\Platforms\OpenGL\OpenGLVertexArray.cpp" />
   </ItemGroup>
 </Project>
