@@ -2,7 +2,8 @@
 #include "Application.h"
 #include "Log.h"
 
-#include <glad/glad.h>
+//#include <glad/glad.h>
+#include "Renderer/Renderer.h"
 
 namespace QQhang {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -139,16 +140,16 @@ namespace QQhang {
 
 	void Application::Run() {
 		while (m_Running) {
-			glClearColor(.2, .2, .2, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
+			RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+			RenderCommand::Clear();
+
+			Renderer::BeginScene();
 
 			m_BlueShader->Bind();
-			m_SquareVA->Bind();
-			glDrawElements(GL_TRIANGLES, m_SquareVA->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			Renderer::Submit(m_SquareVA);
 
 			m_Shader->Bind();
-			m_VertexArray->Bind();
-			glDrawElements(GL_TRIANGLES, m_VertexArray->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			Renderer::Submit(m_VertexArray);
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();

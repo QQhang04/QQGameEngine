@@ -1,17 +1,17 @@
 #pragma once
-namespace QQhang {
 
-	enum class RendererAPI
-	{
-		None = 0, OpenGL = 1
-	};
+#include "RenderCommand.h"
+namespace QQhang {
 
 	class Renderer
 	{
 	public:
-		inline static RendererAPI GetAPI() { return s_RendererAPI; }
-	private:
-		static RendererAPI s_RendererAPI;
+		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
+		
+		static void BeginScene();
+		static void EndScene();
+
+		static void Submit(const std::shared_ptr<VertexArray>& vertexArray);
 	};
 
 
